@@ -70,3 +70,5 @@ router.put('/:id', validatePartyId, (req, res) => {
           .json({errorMessage: 'The party information could not be modified.' });
       });
 });
+
+module.exports = router;
