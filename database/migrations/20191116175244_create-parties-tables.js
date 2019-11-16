@@ -51,6 +51,7 @@ exports.up = function(knex) {
       tbl.integer('price')
         .notNullable();
       tbl.boolean('purchased')
+        .defaultTo('false')
         .notNullable();
       tbl.integer('party_id')
         .unsigned()
@@ -64,6 +65,7 @@ exports.up = function(knex) {
       tbl.string('task')
         .notNullable();
       tbl.boolean('completed')
+        .defaultTo('false')
         .notNullable()
       tbl.integer('party_id')
         .unsigned()
