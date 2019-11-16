@@ -6,7 +6,7 @@ module.exports = {
     client: 'sqlite3',
     useNullAsdefault: true,
     connection: {
-      filename: './database/partyplanner.db3'
+      filename: './database/parties.db3'
     },
     migrations: {
       directory: './database/migrations'
