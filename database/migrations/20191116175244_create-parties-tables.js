@@ -66,7 +66,7 @@ exports.up = function(knex) {
         .notNullable();
       tbl.boolean('completed')
         .defaultTo('false')
-        .notNullable()
+        .notNullable();
       tbl.integer('party_id')
         .unsigned()
         .references('id')
