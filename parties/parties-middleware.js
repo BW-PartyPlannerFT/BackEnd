@@ -5,7 +5,9 @@ module.exports = {
     validatePartyId,
     validateShopping,
     validateShoppingId,
-    validateItemId
+    validateItemId,
+    validateTodo,
+    validateTaskId
 }
 
 function validateParty (req, res, next) {
@@ -71,5 +73,29 @@ function validateShoppingId(req, res, next) {
         .catch(() =>{
                 res.status(500)
                 .json({ errorMessage: "error" })
+            })
+  };
+
+  function validateTodo(req, res, next) {
+    if(!req.body) res.status(400).json({ message: "missing shopping list data" })
+    if(!req.body.task) res.status(400).json({ message: "missing required task field" })
+    if(!req.body.party_id) res.status(400).json({ message: "missing required party_id" })
+    next()
+};
+
+function validateTaskId(req, res, next) {
+    const id = req.params.taskId;
+    db.getTaskById(Number(id))
+        .then(task => {
+            if(task){
+                req.task = task
+                next()
+            } else {
+                res.status(400).json({ message: 'Invalid item id' })
+            }
+        })
+        .catch(err =>{
+                res.status(500)
+                .json(err)
             })
   };
