@@ -6,7 +6,8 @@ const server = express();
 
 const authRouter = require('../auth/auth-router');
 const authenticate = require('../auth/auth-model');
-const users = require('../users/users-router')
+const users = require('../users/users-router');
+const partiesRouter = require('../parties/parties-router');
 
 server.use(helmet());
 server.use(cors());
@@ -14,6 +15,7 @@ server.use(express.json());
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, users);
+server.use('/api/parties', authenticate, partiesRouter);
 
 server.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome to The Party Planner' });
