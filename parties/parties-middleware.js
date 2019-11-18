@@ -1,4 +1,4 @@
-const db = require('./parties-module');
+const db = require('./parties-model');
 
 module.exports = {
     validateParty,
