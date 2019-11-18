@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('./parties-module');
+const db = require('./parties-model');
 
 const {
     validateParty,
