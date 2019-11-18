@@ -1,11 +1,18 @@
 # BackEnd
 Heroku App URL (need before each method url):https://partyplanner-b.herokuapp.com
 
-Register and Login
+REGISTER and LOGIN
 
-Parties
+Endpoint: POST /api/auth/register
+Require username, email password / must be < 255 characters /username must be unique
 
-**Example /GET /api/parties
+Endpoint: POST /api/auth/login
+Require username , password
+
+PARTIES
+
+Endpoint: /GET /api/parties
+Example;
 
 [
   {
@@ -20,9 +27,10 @@ Parties
   }
 ]
 
-Categories
+CATEGORIES
 
-**Example /GET /api/categories
+Endpoint: /GET /api/categories
+Example;
 
 [
     {
@@ -59,4 +67,86 @@ Categories
     }
 ]
 
-Party shopping List
+PARTY SHOPPING LIST
+
+Endpoint: GET	/api/parties/:id/shoppingList	
+Must be a validated party id 
+
+Endpoint: POST	/api/parties/:id/shoppingList	
+Must be a validated party id / Require item, price, party_id, purchased
+
+Endpoint: PUT	/api/parties/:id/shoppingList/:itemId	
+Must be a validated party id / Must be validated item id
+
+Endpoint: DELETE	/api/parties/:id/shoppingList/:itemId	
+Must be a validated party id / Must be validated item id
+
+Example; /GET /api/parties/2/shoppingList
+[
+    {
+        "id": 2,
+        "item": "Balloon",
+        "price": 10
+    }
+]
+
+PART TODO LIST
+
+Endpoint: GET	/api/parties/:id/todoList	
+Must be a validated party id 
+
+Endpoint: POST	/api/parties/:id/todoList	
+Must be a validated party id / Require task, party_id
+
+Endpoint: PUT	/api/parties/:id/todoList/:taskId	
+Must be a validated party id / Must be a validated task id
+
+Endpoint: DELETE	/api/parties/:id/todoList/:taskId	
+Must be a validated party id / Must be a validated task id
+
+Example; GET /api/todoLists
+[
+    {
+        "id": 1,
+        "task": "Send invitations",
+        "completed": 1,
+        "party_id": 1
+    },
+    {
+        "id": 2,
+        "task": "Go shopping",
+        "completed": 1,
+        "party_id": 2
+    },
+    {
+        "id": 3,
+        "task": "Reserve venue",
+        "completed": 0,
+        "party_id": 1
+    }
+]
+
+PARTY PICTURES
+
+Endpoint: GET	/api/parties/:id/pictures	
+Must be a validated party id 
+
+Endpoint: POST	/api/parties/:id/pictures	
+Must be a validated party id / Require url,party_id
+
+Endpoint: DELETE	/api/parties/:id/pictures/:picId	
+Must be a validated party id / Muse be validated url id
+
+Example; GET /api/pictures
+[
+    {
+        "id": 1,
+        "url": "https://imgur.com/t23BL3j",
+        "party_id": 1
+    },
+    {
+        "id": 2,
+        "url": "https://imgur.com/FdENpL4",
+        "party_id": 2
+    }
+]
