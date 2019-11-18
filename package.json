@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
     "url": "https://github.com/BW-PartyPlannerFT/BackEnd/issues"
   },
   "engines": {
-    "node": "10.16.2"
+    "node": "10.16.2",
+    "npm": "6.11.3"
   },
   "homepage": "https://github.com/BW-PartyPlannerFT/BackEnd#readme",
   "dependencies": {
