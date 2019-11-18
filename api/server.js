@@ -27,7 +27,7 @@ server.use('/api/pictures', authenticate, picturesRouter);
 
 
 server.get('/', (req, res) => {
-    res.status(200).json(`Check out API documentation at https://github.com/BW-PartyPlannerFT/BackEnd`);
+    res.status(200).json(`<h1>Check out API documentation at https://github.com/BW-PartyPlannerFT/BackEnd<h1>`);
 });
 
 module.exports = server;
