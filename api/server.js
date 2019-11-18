@@ -22,7 +22,7 @@ server.use('/api/categories', authenticate, categoriesRouter);
 server.use('/api/shoppingLists', authenticate, shoppingListsRouter);
 
 server.get('/', (req, res) => {
-    res.status(200).json(`<h1>Check out API documentation at https://github.com/BW-PartyPlannerFT/BackEnd</h1>`);
+    res.status(200).json(`Check out API documentation at https://github.com/BW-PartyPlannerFT/BackEnd`);
 });
 
 module.exports = server;
