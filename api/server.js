@@ -10,8 +10,8 @@ const users = require('../users/users-router');
 const partiesRouter = require('../parties/parties-router');
 const categoriesRouter = require('../categories/categories-router');
 const shoppingListsRouter = require('../shoppingList/shoppingLists-router')
-const todoListsRouter = require('../todoList/todoLists-router');
-const picturesRouter = require('../pictures/pictures-router.js');
+const todoListsRouter = require('../todolist/todoLists-router');
+const picturesRouter = require('../pictures/pictures-router');
 
 server.use(helmet());
 server.use(cors());
