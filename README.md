@@ -191,6 +191,8 @@ Example; /GET /api/todoLists
 
 PARTY PICTURES
 
+Endpoint: /GET /api/pictures
+
 Endpoint: /GET /api/parties/:id/pictures
 Must be a validated party id
 
