@@ -30,17 +30,21 @@ PARTIES
 Endpoint: /GET /api/parties
 
 Endpoint: /GET /api/parties/:id
+
 Get's a spefic party with a specific party Id.
 
 Endpoint: /POST /api/parties
+
 Adds a new party/Must be a validated party id 
 
 Require party_name", "host", "guests", "theme", "date", "budget", "category_id",
 
 Endpoint: /PUT /api/parties/:id
+
 Updates a party by Id//Must be a validated party id 
 
 Endpoint: /DELETE /api/parties/:id
+
 Deletes a specific party by Id/Must be a validated party id 
 
 Example;
@@ -65,18 +69,22 @@ CATEGORIES
 Endpoint: /GET /api/categories
 
 Endpoint: /GET /api/categories/:id
-Get's a spefic category with a specific party Id.
+
+Get's a spefic category with a specific category Id.
 
 Endpoint: /POST /api/categories
-Adds a new category/Must be a validated party id 
+
+Adds a new category/Must be a validated category id 
 
 Require "category"
 
 Endpoint: /PUT /api/categories/:id
-Updates a category by Id//Must be a validated party id 
+
+Updates a category by Id//Must be a validated category id 
 
 Endpoint: /DELETE /api/categories/:id
-Deletes a specific category by Id/Must be a validated party id 
+
+Deletes a specific category by Id/Must be a validated category id 
 
 
 Example;
