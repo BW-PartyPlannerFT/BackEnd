@@ -59,7 +59,7 @@ guests
 theme
 date
 budget
-category_id
+category
 ```
 
 Endpoint: /PUT `/api/parties/:id`
@@ -81,58 +81,10 @@ Example;
 "theme": "Rustic BBQ Dinner",
 "date": "12/12/2019",
 "budget": 1000,
-"category_id": 5
+"category": "dinner"
 }
 ]
 ```
-
-
-
-## CATEGORIES
-
-Endpoint: /GET `/api/categories`
-
-Endpoint: /GET `/api/categories/:id`
-
-* Get's a spefic category with a specific category Id.
-
-Endpoint: /POST `/api/categories`
-
-* Adds a new category/Must be a validated category id 
-
-* Requires 
-```
-category
-```
-
-Endpoint: /PUT `/api/categories/:id`
-
-* Updates a category by id//Must be a validated category id 
-
-Endpoint: /DELETE `/api/categories/:id`
-
-* Deletes a specific category by Id/Must be a validated category id 
-
-
-Example;
-```
-[
-{
-"id": 1,
-"category": "Graduation Party"
-},
-{
-"id": 2,
-"category": "Birthday Party"
-},
-{
-"id": 3,
-"category": "Surprise Party"
-}
-]
-```
-
-
 
 ## PARTY SHOPPING LIST
 
