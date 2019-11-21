@@ -10,11 +10,6 @@ exports.up = function(knex) {
         tbl.string('password', 255)
           .notNullable();
     })
-    .createTable('categories', tbl => {
-        tbl.increments();
-        tbl.string('category')
-          .notNullable();
-    })
     .createTable('parties', tbl => {
         tbl.increments();
         tbl.string('party_name')
@@ -24,14 +19,9 @@ exports.up = function(knex) {
         tbl.string('guests')
           .notNullable();
         tbl.string('theme')
-        tbl.string('date')
+        tbl.date('date')
         tbl.integer('budget')
-        tbl.integer('category_id')
-          .unsigned()
-          .references('id')
-          .inTable('categories')
-          .onDelete('CASCADE')
-          .onUpdate('CASCADE')
+        tbl.string('category')
     })
     .createTable('pictures', tbl => {
         tbl.increments();
@@ -82,6 +72,5 @@ exports.down = function(knex) {
     .dropTableIfExists('shopping_lists')
     .dropTableIfExists('pictures')
     .dropTableIfExists('parties')
-    .dropTableIfExists('categories')
     .dropTableIfExists('users')
 };

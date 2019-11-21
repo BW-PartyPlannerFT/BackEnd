@@ -8,7 +8,7 @@ exports.seed = function(knex) {
       theme: 'Rustic BBQ Dinner',
       date: '12/12/2019',
       budget: 1000,
-      category_id: 5
+      category: "dinner"
     },
     {
       party_name: "June's baby shower",
@@ -17,7 +17,7 @@ exports.seed = function(knex) {
       theme: 'Santa Baby',
       date: '25/12/2019',
       budget: 700,
-      category_id: 8
+      category: "shower"
     }
   ]);
 };
